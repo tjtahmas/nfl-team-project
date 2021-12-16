@@ -9,7 +9,7 @@ main {
   --tertiary: #b12704;
   --light: #fafafa;
   --dark: #799FBA;
-  --darker: black;
+  --darker: rgb(0, 0, 0);
   --alpha: rgba(255,255,255,.7);
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
@@ -35,7 +35,7 @@ body {
   letter-spacing: 0.1em;
   background: var(--darker);
   color: var(--light);
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1,
@@ -44,7 +44,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Orbitron', cursive;
+  font-family: 'Times New Roman', sans-serif;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -93,9 +93,9 @@ a:hover {
   transition: all .2s ease-in-out;
 }
 
-header {
+/* header {
  background: ;
-}
+} */
 
 header a {
   color: var(--light);
@@ -135,14 +135,44 @@ span[role='img'] {
 }
 
 form {
-  width: 40%;
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
+#sign-in{
+  background-color: #2c2c2c;
+}
+
+#signInBtn{
+  background-color: #04AA6D;
+  color: white;
+  padding: 7px 10px;
+  margin: 8px 8px;
+  border: none;
+  cursor: pointer;
+  width: 45%;
+}
+
+#signUpBtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 7px 10px;
+  margin: 8px 8px;
+  border: none;
+  cursor: pointer;
+  width: 45%;
+}
+
+
 input {
-  margin: 10px 0;
+  margin: 10px 10px;
   font-size: 1rem;
   padding: 0.25rem;
-  width: 600px;
+  width: 100%;
   border: 1px solid var(--dark);
   outline: none;
   border-radius: 3px;
@@ -186,7 +216,7 @@ header img {
 
 nav {
   position: relative;
-  font-family: 'Orbitron', cursive;
+  font-family: 'Roboto', sans-serif;
   font-size: 2.5rem;
   margin: 30px 20px;
   

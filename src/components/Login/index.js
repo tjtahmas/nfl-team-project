@@ -46,14 +46,13 @@ function Login() {
   };
   return (
     <div>
-      <p>Hello {userName}</p>
-      <form className="form">
+      <form className="form" id="sign-in">
         <input
           value={userName}
           name="userName"
           onChange={handleInputChange}
           type="text"
-          placeholder="username"
+          placeholder="Username"
         />
         <input
           value={password}
@@ -62,7 +61,9 @@ function Login() {
           type="password"
           placeholder="Password"
         />
-        <button type="button" onClick={handleFormSubmit}>Submit</button>
+        <br/>
+        <button type="button" id="signInBtn"onClick={handleFormSubmit}>Sign In</button>
+        <button type="button" id="signUpBtn"onClick={handleFormSubmit}>Sign Up</button>
       </form>
       {errorMessage && (
         <div>
