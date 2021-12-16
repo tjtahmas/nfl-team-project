@@ -1,7 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 
+
 function App() {
+<<<<<<< Updated upstream
+=======
+  const [pages] = useState([
+    { name: "login" },
+    { name: "home" },
+    { name: "teams" },
+  ]);
+
+  const [currentPage, setCurrentPage] = useState(pages[0]);
+
+>>>>>>> Stashed changes
   return (
     <div className="App">
       <header className="App-header">
