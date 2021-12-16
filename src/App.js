@@ -9,7 +9,6 @@ function App() {
     { name: "login" },
     { name: "home" },
     { name: "search" },
-    // { name: "resume" }
   ]);
 
   const [currentPage, setCurrentPage] = useState(pages[0]);

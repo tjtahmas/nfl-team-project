@@ -3,7 +3,6 @@ import PageContent from '../PageContent';
 import Search from '../Search';
 import Home from '../Home';
 import Login from '../Login';
-import Resume from '../Resume';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Page({ currentPage }) {
@@ -15,9 +14,7 @@ function Page({ currentPage }) {
       case 'home':
         return <Home />;
       case 'login':
-        return <Login />;
-      // case 'resume':
-      //   return <Resume />;
+        return <Login />;;
       default:
         return <Login />;
     }
