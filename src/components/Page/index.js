@@ -1,6 +1,7 @@
 import React from 'react';
 import PageContent from '../PageContent';
 import Teams from '../Teams';
+
 import Home from '../Home';
 import Login from '../Login';
 import { capitalizeFirstLetter } from '../../utils/helpers';
