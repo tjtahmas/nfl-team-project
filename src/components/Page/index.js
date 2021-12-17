@@ -17,13 +17,12 @@ function Page({ currentPage }) {
       case 'login':
         return <Login />;
       default:
-        return <Login />;
+        return <Home />;
     }
   };
 
   return (
     <section>
-      <h2>{capitalizeFirstLetter(currentPage.name)}</h2>
       <PageContent>{renderPage()}</PageContent>
     </section>
   );
