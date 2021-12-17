@@ -11,9 +11,15 @@ db.once('open', async () => {
     await Football.deleteMany({});
     await User.deleteMany({});
 
-    //bulk create each model
-    const users = await User.insertMany(userData);
-    const footballs = await Football.insertMany(footballData);
+    await Football.create(footballData);
+    await User.create(userData);
+
+    // //bulk create each model
+    // const users = await User.insertMany(userData);
+    // const footballs = await Football.insertMany(footballData);
+
+    // await users.save();
+    // await footballs.save();
 
     console.log('DATABASE SUCCESSFULLY SEEDED!!!');
     process.exit(0);

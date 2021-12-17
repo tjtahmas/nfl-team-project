@@ -14,7 +14,16 @@ fs.readFile('./seeds/fb.json', 'utf-8', async (err, data) => {
         console.log('Successfully read file!!')        
 
         for (i = 0; i < fbData.length; i++){
-            footballData[i] = {teamCode: fbData[i].Team, teamData: fbData[i]};
+            footballData[i] = {
+                code: fbData[i].Team, 
+                name: fbData[i].TeamName,
+                score: fbData[i].Score,
+                oppScore: fbData[i].OpponentScore,
+                rushYards: fbData[i].RushingYards,
+                passTDs: fbData[i].PassingTouchdowns,
+                thirdDownPct: fbData[i].ThirdDownPercentage,
+                fumblesLost: fbData[i].FumblesLost
+            };
         };
 
         //const footballData = JSON.stringify(footballData);
