@@ -8,7 +8,8 @@ const footballSchema = new Schema(
             trim: true,
         },
         teamData: {
-            type: Array,
+            type: Map,
+            of: Mixed
         }
     }
 )
