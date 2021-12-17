@@ -69,7 +69,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: 85px;
 }
 
 h6 {
@@ -169,6 +169,17 @@ form {
   width: 45%;
 }
 
+.btn {
+  background-color: rgba(0, 0, 0, 0.411);
+  color: #fafafa;
+  width: 600px;
+  height: 85px;
+  font-size: 55px;
+}
+
+.wft{
+  font-size: 40px;
+}
 
 input {
   margin: 10px 10px;
