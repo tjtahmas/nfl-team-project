@@ -1,26 +1,29 @@
-//const db = require('../config/connection')
-//const { Football } = require('../models');
-const axios = require('axios');
-const fs = require('fs');
+const db = require('../config/connection')
+const { User, Football } = require('../models');
 
-console.log('RUNNING SEED FILE!')
+const footballData = require('./footballData.json')
+const userData = require('./userData.json');
 
-fs.readFile('./fb.json', 'utf-8', (err, data) => {
-    if (err) {
-        console.log('Error reading file', err)
-        return
-    }
-    try {
-        fbData = JSON.parse(data)
-        console.log('Successfully read file!!')
 
-    } catch (err) {
-        console.log('Error parsing JSON string:', err)
-    }
-})
+//RUN SEED
+db.once('open', async () => {
+    //clean database
+    await Football.deleteMany({});
+    await User.deleteMany({});
 
-//Try to pass fbData as global variable if you wish to use, or work within the TRY function
+    await Football.create(footballData);
+    await User.create(userData);
 
+    // //bulk create each model
+    // const users = await User.insertMany(userData);
+    // const footballs = await Football.insertMany(footballData);
+
+    // await users.save();
+    // await footballs.save();
+
+    console.log('DATABASE SUCCESSFULLY SEEDED!!!');
+    process.exit(0);
+});
 
 
 
