@@ -3,28 +3,28 @@
         "id": 1,
         "username": "tjtahmas",
         "email": "tjtahmas@email.com",
-        "password:": "tj1234",
+        "password": "tj1234",
         "favorites": [1]
     },
     {
         "id": 2,
         "username": "lhinkle",
         "email": "lhinkle@email.com",
-        "password:": "landon123",
+        "password": "landon123",
         "favorites": [2]
     },
     {
         "id": 3,
         "username": "jtuttle",
         "email": "jtuttle@email.com",
-        "password:": "jalon123",
+        "password": "jalon123",
         "favorites": [3]
     },
     {
         "id": 4,
         "username": "amarino",
         "email": "amarino@email.com",
-        "password:": "antonio123",
+        "password": "antonio123",
         "favorites": [4]
     }
 ]
