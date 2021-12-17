@@ -2,14 +2,33 @@ const { Schema, model } = require('mongoose');
 
 const footballSchema = new Schema(
     {
-        teamCode: {
+        code: {
             type: String,
             unique: true,
             trim: true,
         },
-        teamData: {
-            type: Map,
-            of: Mixed
+        name: {
+            type: String,
+            unique: true,
+            trim: true,
+        },
+        score: {
+            type: Number,
+        },
+        oppScore: {
+            type: Number,
+        },
+        rushYards: {
+            type: Number,
+        },
+        passTDs: {
+            type: Number,
+        },
+        thirdDownPct: {
+            type: Number,
+        },
+        fumblesLost: {
+            type: Number,
         }
     }
 )

@@ -4,27 +4,27 @@
         "username": "tjtahmas",
         "email": "tjtahmas@email.com",
         "password:": "tj1234",
-        "favorites": []
+        "favorites": [1]
     },
     {
         "id": 2,
         "username": "lhinkle",
         "email": "lhinkle@email.com",
         "password:": "landon123",
-        "favorites": []
+        "favorites": [2]
     },
     {
         "id": 3,
         "username": "jtuttle",
         "email": "jtuttle@email.com",
         "password:": "jalon123",
-        "favorites": []
+        "favorites": [3]
     },
     {
         "id": 4,
         "username": "amarino",
         "email": "amarino@email.com",
         "password:": "antonio123",
-        "favorites": []
+        "favorites": [4]
     }
 ]
