@@ -3,43 +3,6 @@ import React, { useState } from 'react';
 
 function Teams() {
     return (
-        // <section>
-        //     <h3>CHOOSE A TEAM</h3>
-        //     <ul className='teams' class='btn'>
-        //         <button><li>Arizona Cardinals</li></button>
-        //         <li>Atlanta Falcons</li>
-        //         <li>Baltimore Ravens</li>
-        //         <li>Buffalo Bills</li>
-        //         <li>Carolina Panthers</li>
-        //         <li>Chicago Bears</li>
-        //         <li>Cincinnati Bengals</li>
-        //         <li>Cleveland Browns</li>
-        //         <li>Dallas Cowboys</li>
-        //         <li>Denver Broncos</li>
-        //         <li>Detroit Lions</li>
-        //         <li>Green Bay Packers</li>
-        //         <li>Houston Texans</li>
-        //         <li>Indianapolis Colts</li>
-        //         <li>Jacksonville Jaguars</li>
-        //         <li>Kansas City Chiefs</li>
-        //         <li>Las Vegas Raiders</li>
-        //         <li>Los Angeles Chargers</li>
-        //         <li>Los Angeles Rams</li>
-        //         <li>Miami Dolphins</li>
-        //         <li>Minnesota Vikings</li>
-        //         <li>New England Patriots</li>
-        //         <li>New Orleans Saints</li>
-        //         <li>New York Giants</li>
-        //         <li>New York Jets</li>
-        //         <li>Philadelphia Eagles</li>
-        //         <li>Pittsburgh Steelers</li>
-        //         <li>San Francisco 49ers</li>
-        //         <li>Seattle Seahwaks</li>
-        //         <li>Tampa Bay Buccaneers</li>
-        //         <li>Tennessee Titans</li>
-        //         <li>Washington Football Team</li>
-        //     </ul>
-        // </section>
 
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
 <ol class="carousel-indicators">
@@ -79,13 +42,13 @@ function Teams() {
     </div>
   </div>
   <div class="carousel-item">
-    <img src="https://wallpapercave.com/wp/TqZQBOX.jpg" class="d-block w-100" alt="..."/>
+    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Free-Images-Bengals-Logo-Wallpapers.jpg" class="d-block w-100" alt="..."/>
     <div class="carousel-caption d-none d-md-block">
       <h5>Cincinnati Bengals</h5>
     </div>
   </div>
   <div class="carousel-item">
-    <img src="https://wallpapercave.com/wp/wc1675698.jpg" class="d-block w-100" alt="..."/>
+    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Photos-Cleveland-Browns-Wallpapers.png" class="d-block w-100" alt="..."/>
     <div class="carousel-caption d-none d-md-block">
       <h5>Cleveland Browns</h5>
     </div>
