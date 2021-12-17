@@ -5,7 +5,7 @@ main {
 }
 :root {
   --primary: #8c54ff;
-  --secondary: #31343D;
+  --secondary: #00e9fa;
   --tertiary: #b12704;
   --light: #fafafa;
   --dark: #799FBA;
@@ -93,9 +93,11 @@ a:hover {
   transition: all .2s ease-in-out;
 }
 
-/* header {
- background: ;
-} */
+.nflLogo{
+ width: 100px;
+ left: 103%;
+ 
+}
 
 header a {
   color: var(--light);
@@ -210,7 +212,7 @@ header img {
   top: 0;
   left: 0;
   height: auto;
-  filter: sepia(1) opacity(60%);
+  /* filter: sepia(1) opacity(60%); */
   opacity: 0.5;
 }
 
