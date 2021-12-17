@@ -8,9 +8,9 @@ import Footer from "./components/Footer";
 function App() {
 
   const [pages] = useState([
-    { name: "login" },
     { name: "home" },
     { name: "teams" },
+    { name: "login" },
   ]);
 
   const [currentPage, setCurrentPage] = useState(pages[0]);
