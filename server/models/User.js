@@ -9,7 +9,7 @@ const userSchema = new Schema(
         },
         username: {
             type: String,
-            required: true,
+            required: "Username is required",
             unique: true,
             trim: true,
         },
@@ -21,12 +21,19 @@ const userSchema = new Schema(
         },
         password: {
             type: String,
+            trim: true,
+            required: "Password is Required",
+            validate: [({ length }) => length >= 6, "Password should be longer."]
         },
         favorites: {
             type: Array,
+        },
+        userCreated: {
+            type: Date, 
+            default: Date.now
         }
     }
-)
+);
 
 const User = model('User', userSchema);
 

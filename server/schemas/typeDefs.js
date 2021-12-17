@@ -1,34 +1,29 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-  type School {
-    _id: ID
-    name: String
-    location: String
-    studentCount: Int
-    classes: [Class]
+  type User {
+      id: Int
+      username: String
+      email: String
+      password: String
+      favorites: [Int]
+      userCreated: String
   }
 
-  type Class {
-    _id: ID
-    name: String
-    building: String
-    creditHours: Int
-    professor: Professor
-  }
-
-  type Professor {
-    _id: ID
-    name: String
-    officeHours: String
-    officeLocation: String
-    studentScore: Float
+  type Football {
+      code: String
+      name: String
+      score: Int
+      oppScore: Int
+      rushYards: Int
+      passTDs: Int
+      thirdDownPct: Float
+      fumblesLost: Int
   }
 
   type Query {
-    schools: [School]
-    classes: [Class]
-    professors: [Professor]
+      users: [User]
+      footballs: [Football]
   }
 `;
 
