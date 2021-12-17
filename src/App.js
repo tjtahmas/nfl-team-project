@@ -4,11 +4,13 @@ import Nav from "./components/Nav";
 import Page from "./components/Page";
 import Footer from "./components/Footer";
 
+
 function App() {
+
   const [pages] = useState([
     { name: "login" },
     { name: "home" },
-    { name: "search" },
+    { name: "teams" },
   ]);
 
   const [currentPage, setCurrentPage] = useState(pages[0]);
