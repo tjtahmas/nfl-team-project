@@ -25,7 +25,7 @@ const typeDefs = gql`
   type Query {
       users: [User]
       footballs: [Football]
-      football(id: ID!): Football
+      football(id: ID!): Footbal
   }
 `;
 

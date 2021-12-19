@@ -1,3 +1,13 @@
+import { gql } from '@apollo/client';
+
+export const QUERY_STATS = gql`
+  query ExampleQuery {
+  footballs {
+    code
+  }
+}
+`;
+
 export function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }

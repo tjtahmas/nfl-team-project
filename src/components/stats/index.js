@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PageContent = (stats) => {
+const Stats = (props) => {
 
   return (
     <div>
@@ -21,4 +21,4 @@ const PageContent = (stats) => {
   );
 };
 
-export default PageContent;
+export default Stats;
