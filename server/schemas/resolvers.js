@@ -8,6 +8,9 @@ const resolvers = {
         users: async () => {
             return await User.find({})
         },
+        footballs: async () => {
+            return await Football.findOne({code: code})
+        }
     }
 };
 
