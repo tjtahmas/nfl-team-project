@@ -24,6 +24,7 @@ const typeDefs = gql`
   type Query {
       users: [User]
       footballs: [Football]
+      stats: [Football]
   }
 `;
 
