@@ -3,8 +3,13 @@ import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Page from "./components/Page";
 import Footer from "./components/Footer";
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache(),
+});
 function App() {
 
   const [pages] = useState([
@@ -16,7 +21,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(pages[0]);
 
   return (
-    <div>
+      <ApolloProvider client={client}>
       <Header>
         <Nav
           pages={pages}
@@ -28,7 +33,7 @@ function App() {
         <Page currentPage={currentPage}></Page>
       </main>
       <Footer />
-    </div>
+    </ApolloProvider>
   );
 }
 

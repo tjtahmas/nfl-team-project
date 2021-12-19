@@ -1,3 +1,20 @@
+import { gql } from '@apollo/client';
+
+export const QUERY_STATS = gql`
+mutation football($code: String){
+	football(code: $code ){
+		_id,
+		code, 
+		name,
+		oppScore,
+		rushYards,
+		passTDs,
+		thirdDownPct,
+		fumblesLost
+	}
+}
+`;
+
 export function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }

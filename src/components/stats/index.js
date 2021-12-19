@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const PageContent = (stats) => {
+function Stats(props) {
+
+
 
   return (
     <div>
-        <h3>Team Name</h3>
+        <h3>{props.tStats}</h3>
         <h5>Here's your teams best stats:</h5>
         <ul>
             <li>Stat 1</li>
@@ -21,4 +23,4 @@ const PageContent = (stats) => {
   );
 };
 
-export default PageContent;
+export default Stats;
