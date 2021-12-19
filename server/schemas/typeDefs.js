@@ -25,7 +25,10 @@ const typeDefs = gql`
   type Query {
       users: [User]
       footballs: [Football]
-      football(id: ID!): Footbal
+  }
+
+  type  Mutation {
+    football(code: String): Football
   }
 `;
 

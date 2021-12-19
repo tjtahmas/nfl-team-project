@@ -5,15 +5,15 @@ const resolvers = {
         footballs: async () => {
             return await Football.find({})
         },
-        football: async (parent, args) => {
-            return await Football.findOne(args.code)
-        },
+
         users: async () => {
             return await User.find({})
         },
-        footballs: async () => {
-            return await Football.findOne({code: code})
-        }
+    },
+    Mutation: {
+        football: async (parent, {code}) => {
+            return await Football.findOne({code})
+        },
     }
 };
 

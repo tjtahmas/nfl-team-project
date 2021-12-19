@@ -1,10 +1,17 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_STATS = gql`
-  query ExampleQuery {
-  footballs {
-    code
-  }
+mutation football($code: String){
+	football(code: $code ){
+		_id,
+		code, 
+		name,
+		oppScore,
+		rushYards,
+		passTDs,
+		thirdDownPct,
+		fumblesLost
+	}
 }
 `;
 
