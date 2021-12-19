@@ -3,208 +3,214 @@ import 'animate.css';
 
 
 function Teams() {
+
+  const handleFormSubmit = (e) => {
+    alert(this.textContent)
+  }
+
+
     return (
-<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-<ol class="carousel-indicators">
-  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+<div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
+<ol className="carousel-indicators">
+  <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
   <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
   <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
 </ol>
-<div class="carousel-inner">
-<div class="carousel-item active animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp4503421.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Arizona Cardinals</h5>
+<div className="carousel-inner">
+<div className="carousel-item active animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp4503421.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Arizona Cardinals</h5>
     </div>
 </div>
-<div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp4503530.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Baltimore Ravens</h5>
+<div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp4503530.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Baltimore Ravens</h5>
     </div>
 </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp4509031.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Buffalo Bills</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp4509031.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Buffalo Bills</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp4508984.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Carolina Panthers</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp4508984.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Carolina Panthers</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp4509008.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Chicago Bears</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp4509008.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Chicago Bears</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Free-Images-Bengals-Logo-Wallpapers.jpg" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Cincinnati Bengals</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Free-Images-Bengals-Logo-Wallpapers.jpg" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Cincinnati Bengals</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Photos-Cleveland-Browns-Wallpapers.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Cleveland Browns</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Photos-Cleveland-Browns-Wallpapers.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Cleveland Browns</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://www.hdwallpaper.nu/wp-content/uploads/2016/12/dallas_cowboys-11.jpg" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Dallas Cowboys</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://www.hdwallpaper.nu/wp-content/uploads/2016/12/dallas_cowboys-11.jpg" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Dallas Cowboys</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://cdn.wallpapersafari.com/23/76/OJn4xU.jpg" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Denver Broncos</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://cdn.wallpapersafari.com/23/76/OJn4xU.jpg" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Denver Broncos</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp4524707.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Detroit Lions</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp4524707.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Detroit Lions</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://images.alphacoders.com/105/1055336.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Green Bay Packers</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://images.alphacoders.com/105/1055336.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Green Bay Packers</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://cdn.wallpapersafari.com/34/60/pvs6L3.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Houston Texans</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://cdn.wallpapersafari.com/34/60/pvs6L3.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Houston Texans</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://cdn.wallpapersafari.com/32/69/Qb4TPu.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Indianapolis Colts</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://cdn.wallpapersafari.com/32/69/Qb4TPu.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Indianapolis Colts</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="http://blog.hdwallsource.com/wp-content/uploads/2016/05/jacksonville-jaguars-desktop-wallpaper-52939-54660-hd-wallpapers.jpg" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Jacksonville Jaguars</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="http://blog.hdwallsource.com/wp-content/uploads/2016/05/jacksonville-jaguars-desktop-wallpaper-52939-54660-hd-wallpapers.jpg" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Jacksonville Jaguars</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp1854981.jpg" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Kansas City Chiefs</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp1854981.jpg" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Kansas City Chiefs</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/WCj0JZu.jpg" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Las Vegas Raiders</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/WCj0JZu.jpg" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Las Vegas Raiders</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp4535051.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Los Angeles Chargers</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp4535051.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Los Angeles Chargers</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp4535057.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Los Angeles Rams</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp4535057.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Los Angeles Rams</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp4501758.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Miami Dolphins</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp4501758.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Miami Dolphins</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://cdn.wallpapersafari.com/95/89/ilIrwW.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Minnesota Vikings</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://cdn.wallpapersafari.com/95/89/ilIrwW.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Minnesota Vikings</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp1810625.jpg" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>New England Patriots</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp1810625.jpg" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>New England Patriots</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp5988973.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>New Orleans Saints</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp5988973.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>New Orleans Saints</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp1813881.jpg" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>New York Giants</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp1813881.jpg" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>New York Giants</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp4543435.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>New York Jets</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp4543435.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>New York Jets</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp5231096.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Philadelphia Eagles</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp5231096.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Philadelphia Eagles</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp4974951.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Pittsburgh Steelers</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp4974951.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Pittsburgh Steelers</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://images7.alphacoders.com/106/1063939.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>San Francisco 49ers</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://images7.alphacoders.com/106/1063939.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>San Francisco 49ers</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapertag.com/wallpaper/full/e/9/5/111499-seattle-seahawks-wallpaper-1920x1080-for-ios.jpg" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Seattle Seahwaks</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapertag.com/wallpaper/full/e/9/5/111499-seattle-seahawks-wallpaper-1920x1080-for-ios.jpg" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Seattle Seahwaks</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp1956208.jpg" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Tampa Bay Buccaneers</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp1956208.jpg" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Tampa Bay Buccaneers</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://wallpapercave.com/wp/wp4551562.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn'>Tennessee Titans</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://wallpapercave.com/wp/wp4551562.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn' onClick={handleFormSubmit}>Tennessee Titans</h5>
     </div>
   </div>
-  <div class="carousel-item animate__animated animate__pulse">
-    <img src="https://www.prosportsbackgrounds.com/wp-content/uploads/2020/09/2020-nfl-washington-hardwood-desktop.png" class="d-block w-100" alt="..."/>
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class='btn wft'>Washington Football Team</h5>
+  <div className="carousel-item animate__animated animate__pulse">
+    <img src="https://www.prosportsbackgrounds.com/wp-content/uploads/2020/09/2020-nfl-washington-hardwood-desktop.png" className="d-block w-100" alt="..."/>
+    <div className="carousel-caption d-none d-md-block">
+      <h5 className='btn wft'>Washington Football Team</h5>
     </div>
   </div>
 </div>
-<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  <span class="sr-only">Previous</span>
+<a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+  <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span className="sr-only">Previous</span>
 </a>
-<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  <span class="sr-only">Next</span>
+<a className="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+  <span className="carousel-control-next-icon" aria-hidden="true"></span>
+  <span className="sr-only">Next</span>
 </a>
 </div>
     );
