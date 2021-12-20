@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { checkPassword } from '../../utils/helpers';
 
+
 function Login() {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
@@ -62,8 +63,8 @@ function Login() {
           placeholder="Password"
         />
         <br/>
-        <button type="button" id="signInBtn"onClick={handleFormSubmit}>Sign In</button>
-        <button type="button" id="signUpBtn"onClick={handleFormSubmit}>Sign Up</button>
+        <button type="button" id="signInBtn" onClick={handleFormSubmit}>Sign In</button>
+        <button type="button" id="signUpBtn" onClick={handleFormSubmit}>Sign Up</button>
       </form>
       {errorMessage && (
         <div>
