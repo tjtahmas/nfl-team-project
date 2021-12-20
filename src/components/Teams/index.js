@@ -1,62 +1,79 @@
 import React, { useState } from 'react';
+import PageContent from '../PageContent';
 import 'animate.css';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_STATS } from '../../utils/helpers'
 import Stats  from '../Stats'
+import { shouldCanonizeResults } from '@apollo/client/cache/inmemory/helpers';
 
 
 function Teams() {
 
-  // const [stats] = useState([
-  //   { name: "ARI" },
-  //   { name: "ATL" },
-  //   { name: "BAL" },
-  // ]);
+  const [currentTeam, setCurrentTeam] = useState("");
+  const [touchdowns, setTouchdowns] = useState("");
+  const [oppScore, setOppScore] = useState("");
+  const [fumbles, setFumbles] = useState("");
+  
+  const renderStats = (tStats) => {
 
-  // const [currentStats, setCurrentStats] = useState(stats[0]);
-  // const tStats = "CIN";
-  // const renderStats = (tStats) => {
-  //   // alert( 'render Stats')
-  //   switch (tStats) {
-  //     case 'ARI':{
-  //       // alert('case');
-  //       return "ARI";
-  //     }
-  //     case 'ATL':
-  //       return "ATL";
-  //     case 'BAL':
-  //       return "BAL";
-  //     default:
-  //       return "CIN";
-  //   }
-  //   alert('out of switch');
-  // };
+    if(!tStats)
+    {return currentTeam}
+    else if(tStats){
+      findTeam({
+        variables: {code: tStats}
+      }).then((result) =>{
+        console.log(result.data);
+        setCurrentTeam(JSON.stringify(result.data.football.name))
+        setTouchdowns(JSON.stringify(result.data.football.passTDs))
+        setOppScore(JSON.stringify(result.data.football.oppScore))
+        setFumbles(JSON.stringify(result.data.football.fumblesLost))
+        return ;
+      })
+    }
+  };
 
-  // const { loading, data} = useQuery(QUERY_STATS);
-  //const statData = data?.football || {};
-
-  // console.log(statData)
   const [findTeam, {error}] = useMutation(QUERY_STATS)
   console.log("Hello")
 
-  const handleFormSubmit = async (e) => {
-    alert(e.target.id)
-    
-    // try {
-    //   const 
-    // }
-
-    // setStats(tStats);
-    //renderStats(e.target.id);
-
+  const handleFormSubmit = async (e) => {    
+    renderStats(e.target.id);
   }
 
   return (
+  <section>
     <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
     <ol className="carousel-indicators">
       <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="6"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="7"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="8"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="9"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="10"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="11"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="12"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="13"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="14"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="15"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="16"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="17"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="18"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="19"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="20"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="21"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="22"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="23"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="24"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="25"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="26"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="27"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="28"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="29"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="30"></li>
     </ol>
     <div className="carousel-inner">
     <div className="carousel-item active animate__animated animate__pulse">
@@ -254,16 +271,24 @@ function Teams() {
       <span className="carousel-control-next-icon" aria-hidden="true"></span>
       <span className="sr-only">Next</span>
     </a>
-    {/* <section>
-    <Stats 
-      stats={stats}
-      setCurrentStats={setCurrentStats}
-      currentStats={currentStats}
-    >
-      {renderStats(tStats)}
-    </Stats>
-    </section> */}
     </div>
+    
+    <Stats>
+      <h3>{currentTeam}</h3>
+      <h4>The Good:</h4>
+      <ul>
+        <li>{touchdowns}</li>
+        <li></li>
+        <li></li>
+      </ul>
+      <h4>The Bad:</h4>
+      <ul>
+        <li>{fumbles}</li>
+        <li>{oppScore}</li>
+        <li></li>
+      </ul>
+    </Stats>
+  </section>
   );
 }
 
