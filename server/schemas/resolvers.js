@@ -1,4 +1,4 @@
-const { User, Football } = require('../models');
+const { User, Football, GoodStats, BadStats } = require('../models');
 
 const resolvers = {
     Query: {
@@ -9,6 +9,14 @@ const resolvers = {
         users: async () => {
             return await User.find({})
         },
+
+        // goodStats: async () => {
+        //     return await GoodStats.find({})
+        // },
+
+        // badStats: async () => {
+        //     return await BadStats.find({})
+        // }
     },
     Mutation: {
         football: async (parent, {code}) => {

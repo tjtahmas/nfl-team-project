@@ -16,18 +16,30 @@ fs.readFile('./seeds/fb.json', 'utf-8', async (err, data) => {
         console.log('Successfully read file!!')        
 
         for (i = 0; i < fbData.length; i++){
-            footballData[i] = {
-                code: fbData[i].Team, 
-                name: fbData[i].TeamName,
-            };
-                
+                           
                 //fields to add:
                 //sort these into good stats, bad stats
 
                 //GOOD STATS!!
 
-            goodStatsData[i] = {
-                //Score
+            // goodStatsData[i] = {
+            //     //code
+            //     code: fbData[i].Team,
+                
+            // };
+
+            // //BAD STATS!!
+            // badStatsData[i] = {
+            //     code: fbData[i].Team,
+            //     //Opponent Score
+                
+            // };
+
+            footballData[i] = {
+                code: fbData[i].Team, 
+                name: fbData[i].TeamName,
+                goodStats: {
+                    //Score
                 score: fbData[i].Score,
                 //First Downs
                 firstDowns: fbData[i].FirstDowns,
@@ -175,12 +187,9 @@ fs.readFile('./seeds/fb.json', 'utf-8', async (err, data) => {
                 puntNetYards: fbData[i].PuntNetYards,
                 //Two Point Conversion Returns
                 twoPointConversionReturns: fbData[i].TwoPointConversionReturns,
-            };
-
-            //BAD STATS!!
-            badStatsData[i] = {
-                //Opponent Score
-                oppScore: fbData[i].OpponentScore,
+                },
+                badStats: {
+                    oppScore: fbData[i].OpponentScore,
                 //Passing Interceptions
                 passingINTs: fbData[i].PassingInterceptions,
                 //Penalties
@@ -323,8 +332,11 @@ fs.readFile('./seeds/fb.json', 'utf-8', async (err, data) => {
                 oppPuntNetYards: fbData[i].OpponentPuntNetYards,
                 //Opponent Two Point Conversion Returns
                 oppTwoPointConversionReturns: fbData[i].OpponentTwoPointConversionReturns,
+                }
             };
         };
+
+        console.log(footballData[0]);
 
         
         //const footballData = JSON.stringify(footballData);
@@ -338,22 +350,22 @@ fs.readFile('./seeds/fb.json', 'utf-8', async (err, data) => {
         });
 
         //Write seed data for GoodStats model
-        fs.writeFile('./seeds/goodStatsData.json', JSON.stringify(goodStatsData), err => {
-            if (err) {
-                console.log('error writing file', err)
-            } else {
-                console.log('successfully wrote good stats data!')
-            }
-        });
+        // fs.writeFile('./seeds/goodStatsData.json', JSON.stringify(goodStatsData), err => {
+        //     if (err) {
+        //         console.log('error writing file', err)
+        //     } else {
+        //         console.log('successfully wrote good stats data!')
+        //     }
+        // });
 
-        //Write seed data for BadStats model
-        fs.writeFile('./seeds/badStatsData.json', JSON.stringify(badStatsData), err => {
-            if (err) {
-                console.log('error writing file', err)
-            } else {
-                console.log('successfully wrote bad stats data!')
-            }
-        });
+        // //Write seed data for BadStats model
+        // fs.writeFile('./seeds/badStatsData.json', JSON.stringify(badStatsData), err => {
+        //     if (err) {
+        //         console.log('error writing file', err)
+        //     } else {
+        //         console.log('successfully wrote bad stats data!')
+        //     }
+        // });
 
     } catch (err) {
         console.log('Error parsing JSON string:', err)
