@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PageContent from '../PageContent';
 import 'animate.css';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_STATS } from '../../utils/helpers'
@@ -7,48 +8,48 @@ import Stats  from '../Stats'
 
 function Teams() {
 
-  // const [stats] = useState([
-  //   { name: "ARI" },
-  //   { name: "ATL" },
-  //   { name: "BAL" },
-  // ]);
+  const [stats] = useState([
+    { code: "ARI" },
+    { code: "ATL" },
+    { code: "BAL" },
+  ]);
 
-  // const [currentStats, setCurrentStats] = useState(stats[0]);
-  // const tStats = "CIN";
-  // const renderStats = (tStats) => {
-  //   // alert( 'render Stats')
-  //   switch (tStats) {
-  //     case 'ARI':{
-  //       // alert('case');
-  //       return "ARI";
-  //     }
-  //     case 'ATL':
-  //       return "ATL";
-  //     case 'BAL':
-  //       return "BAL";
-  //     default:
-  //       return "CIN";
-  //   }
-  //   alert('out of switch');
-  // };
+  const [currentStats, setCurrentStats] = useState(stats[0]);
+  var tStats = "CIN";
+  const renderStats = (tStats, txt) => {
+    // alert( txt)
+    switch (tStats) {
+      case 'ARI':{
+        alert('case');
+        setCurrentStats(txt);
+        return;
+      }
+      case 'ATL':
+        return "ATL";
+      case 'BAL':
+        return "BAL";
+      default:
+        return "CIN";
+    }
+    alert('out of switch');
+  };
 
-  // const { loading, data} = useQuery(QUERY_STATS);
-  //const statData = data?.football || {};
-
-  // console.log(statData)
-  const [findTeam, {error}] = useMutation(QUERY_STATS)
+    const [findTeam, {error}] = useMutation(QUERY_STATS)
   console.log("Hello")
 
   const handleFormSubmit = async (e) => {
-    alert(e.target.id)
-    
-    // try {
-    //   const 
-    // }
 
-    // setStats(tStats);
-    //renderStats(e.target.id);
+    try {
+      const {data} = findTeam({
+        variables: {code: e.target.id}
+      }).then((result) =>{
+        console.log(result.data);
+        renderStats(e.target.id, JSON.stringify(result));
 
+      })
+    } catch (error) {
+      throw error;
+    }
   }
 
   return (
@@ -254,15 +255,15 @@ function Teams() {
       <span className="carousel-control-next-icon" aria-hidden="true"></span>
       <span className="sr-only">Next</span>
     </a>
-    {/* <section>
+    <section>
     <Stats 
       stats={stats}
       setCurrentStats={setCurrentStats}
       currentStats={currentStats}
-    >
+    ><PageContent>{renderStats(tStats)}</PageContent>
       {renderStats(tStats)}
     </Stats>
-    </section> */}
+    </section>
     </div>
   );
 }

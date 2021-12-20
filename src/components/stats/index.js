@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 
 function Stats(props) {
 
-
+  const {
+    stats = [],
+    setCurrentStats,
+    currentStats,
+  } = props;
 
   return (
     <div>
-        <h3>{props.tStats}</h3>
+        <h3>Sup</h3>
         <h5>Here's your teams best stats:</h5>
         <ul>
             <li>Stat 1</li>
