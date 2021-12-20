@@ -1,18 +1,42 @@
 const db = require('../config/connection')
-const { User, Football } = require('../models');
+const { User, Football, GoodStats, BadStats } = require('../models');
 
-const footballData = require('./footballData.json')
+const footballData = require('./footballData.json');
 const userData = require('./userData.json');
-
+const goodStatsData = require('./goodStatsData.json');
+const badStatsData = require('./badStatsData.json');
 
 //RUN SEED
 db.once('open', async () => {
     //clean database
     await Football.deleteMany({});
     await User.deleteMany({});
+    await GoodStats.deleteMany({});
+    await BadStats.deleteMany({});
 
-    await Football.create(footballData);
+    //Relate goodStats,badStats to football schema through _id
+
+    const footballs = await Football.insertMany(footballData);
     await User.create(userData);
+    const goodStats = await GoodStats.create(goodStatsData);
+    const badStats = await BadStats.create(badStatsData);
+
+    
+
+
+
+    // for (i = 0; i < footballs.length; i++) {
+    //     footballs[i].goodStats = goodStats[i]._id;
+    //     footballs[i].badStats = badStats[i]._id;
+    // }
+
+    // for (newFootball of footballs) {
+    //     const tempGoodStats = goodStats;
+    //     const tempBadStats = badStats;
+    //     newFootball.goodStats = tempGoodStats._id
+    //     newFootball.badStats = tempBadStats._id
+    //     await newFootball.save();
+    // }
 
     // //bulk create each model
     // const users = await User.insertMany(userData);

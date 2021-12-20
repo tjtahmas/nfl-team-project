@@ -1,14 +1,22 @@
-const { User, Football } = require('../models');
+const { User, Football, GoodStats, BadStats } = require('../models');
 
 const resolvers = {
     Query: {
         footballs: async () => {
-            return await Football.find({})
+            return await Football.find({}).populate('goodStats').populate('badStats');
         },
 
         users: async () => {
             return await User.find({})
         },
+
+        goodStats: async () => {
+            return await GoodStats.find({})
+        },
+
+        badStats: async () => {
+            return await BadStats.find({})
+        }
     },
     Mutation: {
         football: async (parent, {code}) => {

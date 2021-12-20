@@ -27,6 +27,8 @@ fs.readFile('./seeds/fb.json', 'utf-8', async (err, data) => {
                 //GOOD STATS!!
 
             goodStatsData[i] = {
+                //code
+                code: fbData[i].Team,
                 //Score
                 score: fbData[i].Score,
                 //First Downs
@@ -179,6 +181,7 @@ fs.readFile('./seeds/fb.json', 'utf-8', async (err, data) => {
 
             //BAD STATS!!
             badStatsData[i] = {
+                code: fbData[i].Team,
                 //Opponent Score
                 oppScore: fbData[i].OpponentScore,
                 //Passing Interceptions
