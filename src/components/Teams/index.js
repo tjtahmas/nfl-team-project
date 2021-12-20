@@ -25,6 +25,7 @@ function Teams() {
         variables: {code: tStats}
       }).then((result) =>{
         console.log(result.data);
+        alert(JSON.stringify(result.data.football.name))
       })
       return JSON.stringify(txt)
     }
@@ -33,9 +34,7 @@ function Teams() {
   const [findTeam, {error}] = useMutation(QUERY_STATS)
   console.log("Hello")
 
-  const handleFormSubmit = async (e) => {
-
-    
+  const handleFormSubmit = async (e) => {    
     renderStats(e.target.id);
   }
 
