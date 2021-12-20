@@ -36,6 +36,68 @@ body {
   background: var(--darker);
   color: var(--light);
   font-family: 'Roboto', sans-serif;
+  background-image: url(https://wallpapercave.com/wp/wp2197249.jpg);
+  background-blend-mode: normal;
+}
+
+.missionTitle {
+  text-decoration: underline 2px;
+}
+
+.centerTitle{
+  padding-bottom: 250px;
+}
+ 
+ .page-section {
+   font-size: 20px;
+   margin: 25px 0;
+   padding: 10px 0;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-items: stretch;
+   justify-content: space-between;
+ }
+ .page-section > h3 {
+   flex: 0 0 40%;
+   text-align: left;
+   padding-left: 15px;
+   border-left: 4px solid rgb(222, 231, 205);
+   line-height: 1.1;
+ }
+ 
+ .sadFan {
+   width: 800px;
+   height: 600px; 
+ }
+ 
+ .happyFan {
+   width: 800px;
+   height: 600px;
+ }
+ 
+ .thisFan {
+   font-size: 120px;
+ }
+ 
+ .thatFan {
+   font-size: 120px; 
+ }
+
+ .page-section-two {
+  margin: 25px 0;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 200px;
+}
+.page-section-two > h3 {
+  flex: 0 0 20%;
+  text-align: right;
+  border-right: 4px solid rgb(222, 231, 205);
+  line-height: 1.1;
 }
 
 h1,
@@ -57,11 +119,11 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 12rem;
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 5rem;
 }
 
 h4 {
@@ -99,8 +161,8 @@ a:hover {
  
 }
 
-header a {
-  color: var(--light);
+footer {
+  background-image: url(https://www.teahub.io/photos/full/93-931010_american-football-field-hd.jpg);
 }
 
 button {
@@ -206,10 +268,11 @@ li {
 }
 
 header {
-  height: 200px;
+  height: 250px;
   position: relative;
   overflow: hidden;
   z-index: 2;
+  border-bottom: solid 2px #ccc;
 }
 
 header h1 {
@@ -218,13 +281,11 @@ header h1 {
 }
 
 header img {
-  z-index: 0;
   position: absolute;
   top: 0;
   left: 0;
-  height: auto;
   /* filter: sepia(1) opacity(60%); */
-  opacity: 0.5;
+  opacity: 5;
 }
 
 nav {
