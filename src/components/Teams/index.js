@@ -40,11 +40,40 @@ function Teams() {
   }
 
   return (
+  <section>
     <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
     <ol className="carousel-indicators">
       <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="6"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="7"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="8"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="9"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="10"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="11"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="12"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="13"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="14"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="15"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="16"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="17"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="18"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="19"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="20"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="21"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="22"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="23"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="24"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="25"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="26"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="27"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="28"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="29"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="30"></li>
     </ol>
     <div className="carousel-inner">
     <div className="carousel-item active animate__animated animate__pulse">
@@ -242,6 +271,7 @@ function Teams() {
       <span className="carousel-control-next-icon" aria-hidden="true"></span>
       <span className="sr-only">Next</span>
     </a>
+
     <section>
     <Stats>
       <h3>{currentTeam}</h3>
@@ -257,10 +287,8 @@ function Teams() {
         <li>{oppScore}</li>
         <li></li>
       </ul>
-
     </Stats>
-    </section>
-    </div>
+  </section>
   );
 }
 
