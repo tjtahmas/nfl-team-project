@@ -271,8 +271,8 @@ function Teams() {
       <span className="carousel-control-next-icon" aria-hidden="true"></span>
       <span className="sr-only">Next</span>
     </a>
-
-    <section>
+    </div>
+    
     <Stats>
       <h3>{currentTeam}</h3>
       <h4>The Good:</h4>
