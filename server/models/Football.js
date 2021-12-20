@@ -12,23 +12,15 @@ const footballSchema = new Schema(
             unique: true,
             trim: true,
         },
-        score: {
-            type: Number,
+        //relate to Good Stats
+        goodStats: {
+            type: Schema.Types.ObjectId,
+            ref: 'GoodStats'
         },
-        oppScore: {
-            type: Number,
-        },
-        rushYards: {
-            type: Number,
-        },
-        passTDs: {
-            type: Number,
-        },
-        thirdDownPct: {
-            type: Number,
-        },
-        fumblesLost: {
-            type: Number,
+        //relate to Bad Stats
+        badStats: {
+            type: Schema.Types.ObjectId,
+            ref: 'BadStats'
         }
     }
 )
