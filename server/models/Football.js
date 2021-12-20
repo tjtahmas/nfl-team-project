@@ -445,7 +445,6 @@ const footballSchema = new Schema(
             unique: true,
             trim: true,
         },
-
         //relate to Good Stats
         goodStats: {
             type: GoodStatsSchema,
