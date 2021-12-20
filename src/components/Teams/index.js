@@ -4,11 +4,15 @@ import 'animate.css';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_STATS } from '../../utils/helpers'
 import Stats  from '../Stats'
+import { shouldCanonizeResults } from '@apollo/client/cache/inmemory/helpers';
 
 
 function Teams() {
 
-  const [currentTeam, setCurrentTeam] = useState("CIN");
+  const [currentTeam, setCurrentTeam] = useState("");
+  const [touchdowns, setTouchdowns] = useState("");
+  const [oppScore, setOppScore] = useState("");
+  const [fumbles, setFumbles] = useState("");
   
   const renderStats = (tStats) => {
 
@@ -20,6 +24,9 @@ function Teams() {
       }).then((result) =>{
         console.log(result.data);
         setCurrentTeam(JSON.stringify(result.data.football.name))
+        setTouchdowns(JSON.stringify(result.data.football.passTDs))
+        setOppScore(JSON.stringify(result.data.football.oppScore))
+        setFumbles(JSON.stringify(result.data.football.fumblesLost))
         return ;
       })
     }
@@ -237,7 +244,20 @@ function Teams() {
     </a>
     <section>
     <Stats>
-      {renderStats()}
+      <h3>{currentTeam}</h3>
+      <h4>The Good:</h4>
+      <ul>
+        <li>{touchdowns}</li>
+        <li></li>
+        <li></li>
+      </ul>
+      <h4>The Bad:</h4>
+      <ul>
+        <li>{fumbles}</li>
+        <li>{oppScore}</li>
+        <li></li>
+      </ul>
+
     </Stats>
     </section>
     </div>
