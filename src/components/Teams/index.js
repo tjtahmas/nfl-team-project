@@ -15,41 +15,27 @@ function Teams() {
   ]);
 
   const [currentStats, setCurrentStats] = useState(stats[0]);
-  var tStats = "CIN";
-  const renderStats = (tStats, txt) => {
-    // alert( txt)
-    switch (tStats) {
-      case 'ARI':{
-        alert('case');
-        setCurrentStats(txt);
-        return;
-      }
-      case 'ATL':
-        return "ATL";
-      case 'BAL':
-        return "BAL";
-      default:
-        return "CIN";
-    }
-    alert('out of switch');
-  };
-
-    const [findTeam, {error}] = useMutation(QUERY_STATS)
-  console.log("Hello")
-
-  const handleFormSubmit = async (e) => {
-
-    try {
-      const {data} = findTeam({
-        variables: {code: e.target.id}
+  var tStats;
+  const renderStats = (tStats) => {
+    // txt ? alert("txt") : alert("noStats");
+    if(!tStats)
+    {return "CIN"}
+    else{
+      let txt = findTeam({
+        variables: {code: tStats}
       }).then((result) =>{
         console.log(result.data);
-        renderStats(e.target.id, JSON.stringify(result));
-
+        alert(JSON.stringify(result.data.football.name))
       })
-    } catch (error) {
-      throw error;
+      return JSON.stringify(txt)
     }
+  };
+
+  const [findTeam, {error}] = useMutation(QUERY_STATS)
+  console.log("Hello")
+
+  const handleFormSubmit = async (e) => {    
+    renderStats(e.target.id);
   }
 
   return (
@@ -256,11 +242,7 @@ function Teams() {
       <span className="sr-only">Next</span>
     </a>
     <section>
-    <Stats 
-      stats={stats}
-      setCurrentStats={setCurrentStats}
-      currentStats={currentStats}
-    ><PageContent>{renderStats(tStats)}</PageContent>
+    <Stats>
       {renderStats(tStats)}
     </Stats>
     </section>
