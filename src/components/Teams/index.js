@@ -8,26 +8,20 @@ import Stats  from '../Stats'
 
 function Teams() {
 
-  const [stats] = useState([
-    { code: "ARI" },
-    { code: "ATL" },
-    { code: "BAL" },
-  ]);
-
-  const [currentStats, setCurrentStats] = useState(stats[0]);
-  var tStats;
+  const [currentTeam, setCurrentTeam] = useState("CIN");
+  
   const renderStats = (tStats) => {
-    // txt ? alert("txt") : alert("noStats");
+
     if(!tStats)
-    {return "CIN"}
-    else{
-      let txt = findTeam({
+    {return currentTeam}
+    else if(tStats){
+      findTeam({
         variables: {code: tStats}
       }).then((result) =>{
         console.log(result.data);
-        alert(JSON.stringify(result.data.football.name))
+        setCurrentTeam(JSON.stringify(result.data.football.name))
+        return ;
       })
-      return JSON.stringify(txt)
     }
   };
 
@@ -243,7 +237,7 @@ function Teams() {
     </a>
     <section>
     <Stats>
-      {renderStats(tStats)}
+      {renderStats()}
     </Stats>
     </section>
     </div>
