@@ -74,12 +74,19 @@ function Teams() {
       <li data-target="#carouselExampleCaptions" data-slide-to="28"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="29"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="30"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="31"></li>
     </ol>
     <div className="carousel-inner">
     <div className="carousel-item active animate__animated animate__pulse">
         <img src="https://wallpapercave.com/wp/wp4503421.png" className="d-block w-100" alt="..."/>
         <div className="carousel-caption d-none d-md-block">
           <h5 className='btn' id="ARI" onClick={handleFormSubmit}>Arizona Cardinals</h5>
+        </div>
+    </div>
+    <div className="carousel-item animate__animated animate__pulse">
+        <img src="https://wallpapercave.com/wp/wp4503621.png" className="d-block w-100" alt="..."/>
+        <div className="carousel-caption d-none d-md-block">
+          <h5 className='btn' id="ATL" onClick={handleFormSubmit}>Atlanta Falcons</h5>
         </div>
     </div>
     <div className="carousel-item animate__animated animate__pulse">
