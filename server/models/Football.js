@@ -445,10 +445,6 @@ const footballSchema = new Schema(
             unique: true,
             trim: true,
         },
-<<<<<<< HEAD
-=======
-
->>>>>>> e66b50f08d350cb03f9d541fcd264e7f9fdaebd1
         //relate to Good Stats
         goodStats: {
             type: GoodStatsSchema,
