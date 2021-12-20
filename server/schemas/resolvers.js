@@ -6,17 +6,13 @@ const resolvers = {
             return await Football.find({})
         },
 
+        football: async (parent, args) => {
+            return await Football.find({"code": args.code})
+        },
+
         users: async () => {
             return await User.find({})
         },
-
-        // goodStats: async () => {
-        //     return await GoodStats.find({})
-        // },
-
-        // badStats: async () => {
-        //     return await BadStats.find({})
-        // }
     },
     Mutation: {
         football: async (parent, {code}) => {
