@@ -4,52 +4,39 @@ import 'animate.css';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_STATS } from '../../utils/helpers'
 import Stats  from '../Stats'
+import { shouldCanonizeResults } from '@apollo/client/cache/inmemory/helpers';
 
 
 function Teams() {
 
-  const [stats] = useState([
-    { code: "ARI" },
-    { code: "ATL" },
-    { code: "BAL" },
-  ]);
+  const [currentTeam, setCurrentTeam] = useState("");
+  const [touchdowns, setTouchdowns] = useState("");
+  const [oppScore, setOppScore] = useState("");
+  const [fumbles, setFumbles] = useState("");
+  
+  const renderStats = (tStats) => {
 
-  const [currentStats, setCurrentStats] = useState(stats[0]);
-  var tStats = "CIN";
-  const renderStats = (tStats, txt) => {
-    // alert( txt)
-    switch (tStats) {
-      case 'ARI':{
-        alert('case');
-        setCurrentStats(txt);
-        return;
-      }
-      case 'ATL':
-        return "ATL";
-      case 'BAL':
-        return "BAL";
-      default:
-        return "CIN";
-    }
-    alert('out of switch');
-  };
-
-    const [findTeam, {error}] = useMutation(QUERY_STATS)
-  console.log("Hello")
-
-  const handleFormSubmit = async (e) => {
-
-    try {
-      const {data} = findTeam({
-        variables: {code: e.target.id}
+    if(!tStats)
+    {return currentTeam}
+    else if(tStats){
+      findTeam({
+        variables: {code: tStats}
       }).then((result) =>{
         console.log(result.data);
-        renderStats(e.target.id, JSON.stringify(result));
-
+        setCurrentTeam(JSON.stringify(result.data.football.name))
+        setTouchdowns(JSON.stringify(result.data.football.passTDs))
+        setOppScore(JSON.stringify(result.data.football.oppScore))
+        setFumbles(JSON.stringify(result.data.football.fumblesLost))
+        return ;
       })
-    } catch (error) {
-      throw error;
     }
+  };
+
+  const [findTeam, {error}] = useMutation(QUERY_STATS)
+  console.log("Hello")
+
+  const handleFormSubmit = async (e) => {    
+    renderStats(e.target.id);
   }
 
   return (
@@ -284,13 +271,22 @@ function Teams() {
       <span className="carousel-control-next-icon" aria-hidden="true"></span>
       <span className="sr-only">Next</span>
     </a>
-    </div>
-    <Stats 
-      stats={stats}
-      setCurrentStats={setCurrentStats}
-      currentStats={currentStats}
-    ><PageContent>{renderStats(tStats)}</PageContent>
-      {renderStats(tStats)}
+
+    <section>
+    <Stats>
+      <h3>{currentTeam}</h3>
+      <h4>The Good:</h4>
+      <ul>
+        <li>{touchdowns}</li>
+        <li></li>
+        <li></li>
+      </ul>
+      <h4>The Bad:</h4>
+      <ul>
+        <li>{fumbles}</li>
+        <li>{oppScore}</li>
+        <li></li>
+      </ul>
     </Stats>
   </section>
   );
