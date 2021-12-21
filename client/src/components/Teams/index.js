@@ -34,7 +34,7 @@ function Teams() {
         variables: {code: tStats}
       }).then((result) =>{
         console.log(result.data);
-        setCurrentTeam(JSON.stringify(result.data.football.name))
+        setCurrentTeam(result.data.football.name)
         // good stats
         setScore(JSON.stringify(result.data.football.goodStats.score))
         setFirstDown(JSON.stringify(result.data.football.goodStats.firstDowns))
