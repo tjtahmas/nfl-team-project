@@ -17,22 +17,22 @@ const typeDefs = gql`
           firstDownsPassing: Int
           firstDownsPenalty: Int
           offensiveYards: Int
-          offensiveYardsPerPlay: Int
+          offensiveYardsPerPlay: Float
           TDs: Int
           rushingYards: Int
-          rushingYardsPerAttempt: Int
+          rushingYardsPerAttempt: Float
           rushingTDs: Int
           passingCompletions: Int
           passingYards: Int
           passingTDs: Int
-          passingYardsPerAttempt: Int
-          passingYardsPerCompletion: Int
-          completionPct: Int
-          passerRating: Int
+          passingYardsPerAttempt: Float
+          passingYardsPerCompletion: Float
+          completionPct: Float
+          passerRating: Float
           thirdDownConversions: Int
-          thirdDownPct: Int
+          thirdDownPct: Float
           fourthDownConversions: Int
-          fourthDownPct: Int
+          fourthDownPct: Float
           goalToGoConversions: Int
           returnYards: Int
           qbHits: Int
@@ -40,7 +40,7 @@ const typeDefs = gql`
           safeties: Int
           punts: Int
           puntYards: Int
-          puntAvg: Int
+          puntAvg: Float
           takeaways: Int
           turnoverDifferential: Int
           oppPassingINTs: Int
@@ -49,15 +49,15 @@ const typeDefs = gql`
           oppFumblesLost: Int
           oppTimesSacked: Int
           oppTimesSackedYards: Int
-          redZonePct: Int
+          redZonePct: Float
           qbHitsDiff: Int
           tflDiff: Int
           qbSacksDiff: Int
-          tflPct: Int
-          qbhitsPct: Int
-          oppTimesSackedPct: Int
+          tflPct: Float
+          qbhitsPct: Float
+          oppTimesSackedPct: Float
           kickoffTouchbacks: Int
-          puntNetAvg: Int
+          puntNetAvg: Float
           extraPointPassingConversions: Int
           extraPointRushingConversions: Int
           fgsMade: Int
@@ -107,34 +107,34 @@ const typeDefs = gql`
             oppFirstDownsPassing: Int
             oppFirstDownsPenalty: Int
             oppOffensiveYards: Int
-            oppOffensiveYardsPerPlay: Int
+            oppOffensiveYardsPerPlay: Float
             oppTDs: Int
             oppRushingYards: Int
-            oppRushingYardsPerAttempt: Int
+            oppRushingYardsPerAttempt: Float
             oppRushingTDs: Int
             oppPassingCompletions: Int
             oppPassingYards: Int
             oppPassingTDs: Int
-            oppPassingYardsPerAttempt: Int
+            oppPassingYardsPerAttempt: Float
             oppPassingYardsPerCompletion: Int
-            oppCompletionPct: Int
+            oppCompletionPct: Float
             oppPasserRating: Int
-            oppThirdDownPct: Int
-            oppFourthDownPct: Int
+            oppThirdDownPct: Float
+            oppFourthDownPct: Float
             oppReturnYards: Int
             oppQBHits: Int
             oppTFL: Int
             oppSafeties: Int
             oppPunts: Int
             oppPuntYards: Int
-            oppPuntAvg: Int
-            timesSackedPct: Int
-            oppRedZonePct: Int
-            oppQBHitsPct: Int
+            oppPuntAvg: Float
+            timesSackedPct: Float
+            oppRedZonePct: Float
+            oppQBHitsPct: Float
             puntsHadBlocked: Int
             extraPointsHadBlocked: Int
             fgsHadBlocked: Int
-            oppPuntNetAvg: Int
+            oppPuntNetAvg: Float
             oppExtraPointPassingConversions: Int
             oppExtraPointRushingConversions: Int
             oppFGsMade: Int
