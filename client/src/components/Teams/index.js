@@ -13,6 +13,7 @@ function Teams() {
   //good stats
   const [score, setScore] = useState("");
   const [firstDown, setFirstDown] = useState("");
+  const [tds, setTDs] = useState("");
 
   //bad stats
   const [oppScore, setOppScore] = useState("");
@@ -29,6 +30,8 @@ function Teams() {
         console.log(result.data);
         setCurrentTeam(JSON.stringify(result.data.football.name))
         setScore(JSON.stringify(result.data.football.goodStats.score))
+        setFirstDown(JSON.stringify(result.data.football.goodStats.firstDowns))
+        setTDs(JSON.stringify(result.data.football.goodStats.TDs))
         setOppScore(JSON.stringify(result.data.football.badStats.oppScore))
         setFumbles(JSON.stringify(result.data.football.badStats.fumblesLost))
         return ;
@@ -289,13 +292,14 @@ function Teams() {
       <h4>The Good:</h4>
       <ul>
         <li>Points for: {score}</li>
-        <li>{firstDown}</li>
+        <li>Total First Downs: {firstDown}</li>
+        <li>Total Touchdowns: {tds}</li>
         <li></li>
       </ul>
       <h4>The Bad:</h4>
       <ul>
-        <li>{fumbles}</li>
         <li>Points Against: {oppScore}</li>
+        <li>Total Fumbles: {fumbles}</li>
         <li></li>
       </ul>
     </Stats>

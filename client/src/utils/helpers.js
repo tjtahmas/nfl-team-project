@@ -7,8 +7,8 @@ mutation football($code: String){
 		code, 
 		name,
 		goodStats{
-		score,
-		firstDowns,
+			score,
+			firstDowns,
           firstDownsRushing,
           firstDownsPassing,
           firstDownsPenalty,
