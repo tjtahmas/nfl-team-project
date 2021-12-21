@@ -11,7 +11,7 @@ const typeDefs = gql`
   }
 
   type GoodStats {
-    score: Int
+          score: Int
           firstDowns: Int
           firstDownsRushing: Int
           firstDownsPassing: Int
