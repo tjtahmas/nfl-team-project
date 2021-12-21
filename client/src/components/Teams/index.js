@@ -10,7 +10,11 @@ import { shouldCanonizeResults } from '@apollo/client/cache/inmemory/helpers';
 function Teams() {
 
   const [currentTeam, setCurrentTeam] = useState("");
+  //good stats
   const [score, setScore] = useState("");
+  const [firstDown, setFirstDown] = useState("");
+
+  //bad stats
   const [oppScore, setOppScore] = useState("");
   const [fumbles, setFumbles] = useState("");
   
@@ -26,7 +30,7 @@ function Teams() {
         setCurrentTeam(JSON.stringify(result.data.football.name))
         setScore(JSON.stringify(result.data.football.goodStats.score))
         setOppScore(JSON.stringify(result.data.football.badStats.oppScore))
-        setFumbles(JSON.stringify(result.data.football.fumblesLost))
+        setFumbles(JSON.stringify(result.data.football.badStats.fumblesLost))
         return ;
       })
     }
@@ -285,7 +289,7 @@ function Teams() {
       <h4>The Good:</h4>
       <ul>
         <li>Points for: {score}</li>
-        <li></li>
+        <li>{firstDown}</li>
         <li></li>
       </ul>
       <h4>The Bad:</h4>
