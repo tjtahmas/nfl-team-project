@@ -13,11 +13,17 @@ function Teams() {
   //good stats
   const [score, setScore] = useState("");
   const [firstDown, setFirstDown] = useState("");
+  const [rushingTDs, setRushingTDs] = useState("");
+  const [passingTDs, setPassingTDs] = useState("");
   const [tds, setTDs] = useState("");
+
 
   //bad stats
   const [oppScore, setOppScore] = useState("");
-  const [fumbles, setFumbles] = useState("");
+  const [turnovers, setGiveaways] = useState("");
+  const [yardsAgainst, setYardsAgainst] = useState("");
+  const [interceptions, setInterceptions] = useState("");
+  const [sack, setSacks] = useState("");
   
   const renderStats = (tStats) => {
 
@@ -29,11 +35,19 @@ function Teams() {
       }).then((result) =>{
         console.log(result.data);
         setCurrentTeam(JSON.stringify(result.data.football.name))
+        // good stats
         setScore(JSON.stringify(result.data.football.goodStats.score))
         setFirstDown(JSON.stringify(result.data.football.goodStats.firstDowns))
+        setPassingTDs(JSON.stringify(result.data.football.goodStats.passingTDs))
+        setRushingTDs(JSON.stringify(result.data.football.goodStats.rushingTDs))
         setTDs(JSON.stringify(result.data.football.goodStats.TDs))
+        // bad stats
         setOppScore(JSON.stringify(result.data.football.badStats.oppScore))
-        setFumbles(JSON.stringify(result.data.football.badStats.fumblesLost))
+        setGiveaways(JSON.stringify(result.data.football.badStats.giveaways))
+        setYardsAgainst(JSON.stringify(result.data.football.badStats.oppOffensiveYards))
+        setInterceptions(JSON.stringify(result.data.football.badStats.passingINTs))
+        setInterceptions(JSON.stringify(result.data.football.badStats.passingINTs))
+        setSacks(JSON.stringify(result.data.football.badStats.oppSacks))
         return ;
       })
     }
@@ -294,13 +308,16 @@ function Teams() {
         <li>Points for: {score}</li>
         <li>Total First Downs: {firstDown}</li>
         <li>Total Touchdowns: {tds}</li>
-        <li></li>
+        <li>Rushing Touchdowns: {rushingTDs}</li>
+        <li>Passing Touchdowns: {passingTDs}</li>
       </ul>
       <h4>The Bad:</h4>
       <ul>
         <li>Points Against: {oppScore}</li>
-        <li>Total Fumbles: {fumbles}</li>
-        <li></li>
+        <li>Turnovers: {turnovers}</li>
+        <li>Opponent Offensive Yards: {yardsAgainst}</li>
+        <li>Opponent Interceptions: {interceptions}</li>
+        <li>Sacks Against: {sack}</li>
       </ul>
     </Stats>
   </section>
